@@ -31,7 +31,7 @@ public class CardOrderMeetingTest {
         dateField.sendKeys(Keys.chord(Keys.SHIFT, Keys.HOME), Keys.BACK_SPACE);
         dateField.setValue(firstMeetingDate);
 
-        $x("//*[@data-test-id='agreement']").click();
+        $x("//*[@data-test-id='agreement']//input").click();
         $x("//button[descendant::*[contains(text(),'Запланировать')]]").click();
 
         $(Selectors.withText("Успешно")).shouldBe(Condition.visible, Duration.ofSeconds(15));
