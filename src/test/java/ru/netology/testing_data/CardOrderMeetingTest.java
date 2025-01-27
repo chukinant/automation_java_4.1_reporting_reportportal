@@ -30,8 +30,8 @@ public class CardOrderMeetingTest {
         SelenideElement dateField = $x("//*[@data-test-id='date']//input");
         dateField.sendKeys(Keys.chord(Keys.SHIFT, Keys.HOME), Keys.BACK_SPACE);
         dateField.setValue(firstMeetingDate);
-
-        $x("//*[@data-test-id='agreement']//input").click();
+        $x("//*[contains(@class,'calendar__day_state_current')]").click();
+        $x("//label[@data-test-id='agreement']").click();
         $x("//button[descendant::*[contains(text(),'Запланировать')]]").click();
 
         $(Selectors.withText("Успешно")).shouldBe(Condition.visible, Duration.ofSeconds(15));
