@@ -1,4 +1,4 @@
-package ru.netology.reporing.allure;
+package ru.netology.reporting.reportportal;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Selectors;
