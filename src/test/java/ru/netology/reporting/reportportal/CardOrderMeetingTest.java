@@ -4,8 +4,6 @@ import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Selectors;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
-import com.codeborne.selenide.logevents.SelenideLogger;
-import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.Keys;
 
@@ -21,20 +19,10 @@ public class CardOrderMeetingTest {
     private final SelenideElement dateField = $x("//*[@data-test-id='date']//input");
     private final SelenideElement nameField = $x("//*[@data-test-id='name']//input");
 
-    @BeforeAll
-    static void setupAll() {
-        SelenideLogger.addListener("allure", new AllureSelenide());
-    }
-
     @BeforeEach
     void setUp() {
         var cardOrderPage = Selenide.open("http://localhost:9999/", CardOrderPage.class);
         cardOrderPage.fillForm(validUser);
-    }
-
-    @AfterAll
-    static void afterAll() {
-        SelenideLogger.removeListener("allure");
     }
 
     @Test
