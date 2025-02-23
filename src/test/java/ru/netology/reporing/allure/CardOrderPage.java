@@ -1,10 +1,7 @@
-package ru.netology.testing_data;
+package ru.netology.reporing.allure;
 
-import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
-import org.openqa.selenium.Keys;
 
-import static com.codeborne.selenide.Selenide.$$x;
 import static com.codeborne.selenide.Selenide.$x;
 
 public class CardOrderPage {

@@ -1,4 +1,4 @@
-package ru.netology.testing_data;
+package ru.netology.reporing.allure;
 
 import com.github.javafaker.Faker;
 

@@ -1,4 +1,4 @@
-package ru.netology.testing_data;
+package ru.netology.reporing.allure;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Selectors;
@@ -11,13 +11,12 @@ import java.time.Duration;
 
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$x;
-import static ru.netology.testing_data.DataGenerator.UserRegistration.generateUser;
 
 public class CardOrderMeetingTest {
 
     @Test
     void shouldReplanMeetingTest() {
-        var validUser = generateUser("ru");
+        var validUser = DataGenerator.UserRegistration.generateUser("ru");
         var daysToAddFirstMeeting = 4;
         var firstMeetingDate = DataGenerator.generateDate(daysToAddFirstMeeting);
         var daysToAddSecondMeeting = 6;
