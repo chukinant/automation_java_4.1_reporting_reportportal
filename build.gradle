@@ -1,6 +1,7 @@
 plugins {
     id 'java'
-    id("io.freefair.lombok") version "8.11"
+    id('io.freefair.lombok') version '8.11'
+    id('io.qameta.allure') version '2.11.2'
 }
 
 group 'ru.netology'
@@ -8,9 +9,16 @@ version '1.0-SNAPSHOT'
 
 sourceCompatibility = 11
 
-// кодировка файлов (если используете русский язык в файлах)
-compileJava.options.encoding = "UTF-8"
-compileTestJava.options.encoding = "UTF-8"
+// кодировка файлов (если используется кириллица в файлах)
+compileJava.options.encoding = 'UTF-8'
+compileTestJava.options.encoding = 'UTF-8'
+
+allure {
+    version = '2.20.1'
+    useJUnit5 {
+        version = '2.20.1'
+    }
+}
 
 repositories {
     mavenCentral()
